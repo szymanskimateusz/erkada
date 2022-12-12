@@ -1,0 +1,81 @@
+.news {
+    height: 100%;
+    //padding-top: 40vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: 
+        linear-gradient(to right , rgba($primary-color, 0.9), rgba($primary-color, 0.3)),    
+        url('../img/mainphoto.jpg') center top;
+    background-size: cover;
+
+    &__bio {
+        .text-secondary {
+            padding-bottom: 1rem;
+        }
+    }
+
+    .simplebar-scrollbar::before {
+        background-color: $primary-color;
+    }
+
+    .box {
+        background: transparent;
+        height: 70vh;
+        width: 70vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        justify-content: center;
+        align-items: center;
+
+
+        &__article {
+            background: rgba($primary-color, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            margin: 1.25rem;
+            @include transition-ease;
+
+            h2 {
+                margin: 0.5rem 0;
+            }
+    
+            h6 {
+                margin: 0.3rem 0;
+            }
+    
+            p {
+                margin-bottom: 0.5rem;
+            }
+            
+            a {
+                color: $secondary-color;
+                font-size: 0.6rem;
+                @include transition-ease;
+
+                &:hover {
+                    color: lighten($secondary-color, 20);
+                    @include transition-ease;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+                @include transition-ease;
+
+                a {
+                    font-size: 1rem;
+                    @include transition-ease;
+                }
+            }
+        }
+    }
+}
